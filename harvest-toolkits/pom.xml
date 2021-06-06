@@ -8,11 +8,11 @@
         <version>2.5.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cn.inmer</groupId>
-    <artifactId>toolkits</artifactId>
+    <groupId>com.stminds</groupId>
+    <artifactId>harvest-toolkits</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>toolkits</name>
-    <description>Demo project for Spring Boot</description>
+    <name>harvest-toolkits</name>
+    <description>五丰-工具包</description>
     <properties>
         <java.version>1.8</java.version>
         <spring-native.version>0.10.0-SNAPSHOT</spring-native.version>
