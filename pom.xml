@@ -12,6 +12,7 @@
     <modules>
         <module>harvest-blog</module>
         <module>harvest-toolkits</module>
+        <module>harvest-exercise</module>
     </modules>
 
     <groupId>com.stminds</groupId>
