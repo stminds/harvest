@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>x</title>
+    <style>
+        main {
+            width: 100%;
+            height: 229px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span {
+            display: inline-block;
+            /*     宽度设置的大些就行 */
+            /*     width: 400px; */
+            /*     ch表示一个字体的宽度 */
+            width: 21ch;
+            font: bold 200% Consolas, Monaco, monospace;   /*等宽字体*/
+            overflow: hidden;
+            color: lawngreen;
+            white-space: nowrap;
+            font-weight: 500;
+            border-right: 1px solid transparent;
+            /*     step,帧动画相较于渐变的动画更合适此时 */
+            /*     animation: typing 3s; */
+            animation: typing 2.5s steps(12), caret 1s steps(10) infinite;
+        }
+
+        @keyframes typing{
+            from {
+                width: 0;
+            }
+        }
+        @keyframes caret{
+            50% { border-right-color: black}
+        }
+    </style>
+</head>
+
+<body>
+<main class="main">
+    <span>海上升明月，天涯共此时！</span>
+</main>
+</body>
+</html>
