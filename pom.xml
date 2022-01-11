@@ -12,6 +12,7 @@
     <modules>
         <module>harvest-blog</module>
         <module>harvest-toolkits</module>
+        <module>harvest-source</module>
         <module>harvest-algorithm</module>
     </modules>
 
@@ -23,7 +24,6 @@
     <description>五谷丰登</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring-native.version>0.10.0-SNAPSHOT</spring-native.version>
     </properties>
 
 </project>
