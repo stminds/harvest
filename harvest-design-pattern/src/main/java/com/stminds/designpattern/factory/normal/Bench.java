@@ -3,9 +3,9 @@ package com.stminds.designpattern.factory.normal;
 /**
  * @author harvest
  */
-public interface Stone {
+public interface Bench {
     /**
-     * 产品描述
+     * 凳子描述
      */
     void desc();
 }

@@ -15,6 +15,7 @@
         <module>harvest-source</module>
         <module>harvest-algorithm</module>
         <module>harvest-design-pattern</module>
+        <module>harvest-experiment</module>
     </modules>
 
     <groupId>com.stminds</groupId>

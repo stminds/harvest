@@ -5,12 +5,12 @@ package com.stminds.designpattern.factory.normal;
  * @author harvest
  */
 public enum Products {
-    //石桌
-    STONE_TABLE(StoneTable.class.getName()),
+    //木凳
+    WOOD_BENCH(WoodBench.class.getName()),
     //石凳
     STONE_BENCH(StoneBench.class.getName()),
-    //石床
-    STONE_BED(StoneBed.class.getName());
+    //竹凳
+    BAMBOO_BENCH(BambooBench.class.getName());
     private final String className;
     public String getClassName() {
         return className;

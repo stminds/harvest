@@ -3,9 +3,9 @@ package com.stminds.designpattern.factory.normal;
 /**
  * @author harvest
  */
-public class StoneBed implements Stone{
+public class WoodBench implements Bench {
     @Override
     public void desc() {
-        System.out.println("我是石床");
+        System.out.println("我是木凳");
     }
 }
