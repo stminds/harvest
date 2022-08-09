@@ -1,9 +1,13 @@
-package com.stminds.designpattern.factory.normal;
+package com.stminds.designpattern.factory;
+
+import com.stminds.designpattern.factory.common.Products;
+import com.stminds.designpattern.factory.product.Bench;
+import com.stminds.designpattern.factory.normal.BenchFactory;
 
 /**
  * @author harvest
  */
-public class Main {
+public class NormalFactoryDemo {
     public static void main(String[] args) {
         {
             Bench stoneBench = BenchFactory.getBench(Products.STONE_BENCH);

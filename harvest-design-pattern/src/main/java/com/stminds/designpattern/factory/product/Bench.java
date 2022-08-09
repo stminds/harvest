@@ -1,4 +1,4 @@
-package com.stminds.designpattern.factory.normal;
+package com.stminds.designpattern.factory.product;
 
 /**
  * @author harvest

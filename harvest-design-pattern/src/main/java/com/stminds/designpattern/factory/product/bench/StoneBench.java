@@ -1,4 +1,6 @@
-package com.stminds.designpattern.factory.normal;
+package com.stminds.designpattern.factory.product.bench;
+
+import com.stminds.designpattern.factory.product.Bench;
 
 /**
  * @author harvest

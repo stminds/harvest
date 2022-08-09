@@ -1,5 +1,10 @@
 package com.stminds.designpattern.factory.normal;
 
+import com.stminds.designpattern.factory.common.Products;
+import com.stminds.designpattern.factory.product.Bench;
+import com.stminds.designpattern.factory.product.bench.StoneBench;
+import com.stminds.designpattern.factory.product.bench.WoodBench;
+
 /**
  * @author harvest
  */
