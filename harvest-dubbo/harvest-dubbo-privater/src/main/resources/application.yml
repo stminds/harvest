@@ -11,7 +11,8 @@ dubbo:
             migration: FORCE_APPLICATION
         name: dubbo-private
     registry:
-        address: zookeeper://127.0.0.1:2181?init.timeout=60000
+        #        address: zookeeper://127.0.0.1:2181?init.timeout=60000
+        address: zookeeper://192.168.3.123:2181?init.timeout=60000
     #        address: zookeeper://121.5.7.221:2181?init.timeout=60000
     protocol:
         name: dubbo

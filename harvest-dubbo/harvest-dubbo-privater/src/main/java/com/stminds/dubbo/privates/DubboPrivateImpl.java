@@ -10,6 +10,6 @@ public class DubboPrivateImpl implements DubboTest {
 
     @Override
     public String sayHi() {
-        return "hello";
+        return "hello====================================================";
     }
 }

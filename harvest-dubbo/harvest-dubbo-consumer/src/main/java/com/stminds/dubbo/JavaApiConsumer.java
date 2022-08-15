@@ -17,8 +17,8 @@ import static org.apache.dubbo.registry.client.migration.MigrationRuleHandler.DU
 public class JavaApiConsumer {
 
     public static void main(String[] args) {
-//                method1();
-        method2();
+//        method1();
+                method2();
 
     }
 
@@ -30,21 +30,22 @@ public class JavaApiConsumer {
 
         RegistryConfig registryConfig = new RegistryConfig(applicationModel);
         registryConfig.setProtocol("zookeeper");
-        registryConfig.setAddress("127.0.0.1:2181");
+        registryConfig.setAddress("192.168.3.123:2181");
+        //        registryConfig.setAddress("127.0.0.1:2181");
 
         applicationModel.getApplicationConfigManager().setApplication(applicationConfig);
         applicationModel.getApplicationConfigManager().addRegistry(registryConfig);
         applicationModel.getDeployer().start();
-//        String RULE_KEY = applicationModel.getApplicationName() + ".migration";
-//        DynamicConfiguration configuration = applicationModel.getModelEnvironment().getDynamicConfiguration().get();
-//        configuration.publishConfig(RULE_KEY, DUBBO_SERVICEDISCOVERY_MIGRATION, "");
+        //        String RULE_KEY = applicationModel.getApplicationName() + ".migration";
+        //        DynamicConfiguration configuration = applicationModel.getModelEnvironment().getDynamicConfiguration().get();
+        //        configuration.publishConfig(RULE_KEY, DUBBO_SERVICEDISCOVERY_MIGRATION, "");
         ReferenceConfig<DubboTest> referenceConfig = new ReferenceConfig<>(applicationModel.newModule());
         referenceConfig.setInterface(DubboTest.class);
         referenceConfig.setCheck(false);
         referenceConfig.setGroup("dev");
 
         //        referenceConfig.setParameters(new HashMap<>());
-//        referenceConfig.getParameters().put("migration.step", "APPLICATION_FIRST");
+        //        referenceConfig.getParameters().put("migration.step", "APPLICATION_FIRST");
         DubboTest dubboTest = referenceConfig.get();
         System.out.println(dubboTest.sayHi());
     }
@@ -53,13 +54,13 @@ public class JavaApiConsumer {
         // 当前应用配置
         ApplicationConfig application = new ApplicationConfig();
         application.setName("cdp-consumer");
-        application.setEnableEmptyProtection(false);
 
         // 连接注册中心配置
         RegistryConfig registry = new RegistryConfig();
         registry.setProtocol("zookeeper");
 
-        registry.setAddress("127.0.0.1:2181");
+        registry.setAddress("192.168.3.123:2181");
+
         registry.setTimeout(600000);
         ConsumerConfig consumerConfig = new ConsumerConfig();
 
@@ -71,6 +72,8 @@ public class JavaApiConsumer {
         reference.setRegistry(registry); // 多个注册中心可以用setRegistries()
         reference.setConsumer(consumerConfig);
         reference.setInterface(DubboTest.class);
+        reference.setParameters(new HashMap<>());
+        reference.getParameters().put("migration.step", "APPLICATION_FIRST");
 
         DubboTest shortMessageRpc = reference.get();
         System.out.println(shortMessageRpc.sayHi());
