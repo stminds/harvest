@@ -9,6 +9,5 @@ package com.dtminds.harvest.java.source.util;
  */
 public class HashMapSource {
     public static void main(String[] args) {
-    
     }
 }
